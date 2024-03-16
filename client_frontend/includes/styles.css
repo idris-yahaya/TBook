@@ -24,7 +24,7 @@
     --bg-dark: #dae0e5; /* Darker shade */
     
     /* Border Colors */
-    --border-color: #dee2e6; /* Border color */
+    --border-color: #bbb; /* Border color */
     --border-light: #e9ecef; /* Lighter shade */
     --border-dark: #ced4da; /* Darker shade */
     
@@ -95,4 +95,29 @@ button {
     transition: background-color 0.3s ease;
 }
 
+.primary-button {
+    background-color: var(--primary-color);
+    color: var(--bg-light);
+}
+
+.secondary-button {
+    background-color: var(--secondary-color);
+    color: var(--bg-light);
+}
+
+.primary-button:hover {
+    background-color: var(--primary-dark);
+}
+
+/* Hover effect for Secondary Button */
+.secondary-button:hover {
+    background-color: var(--secondary-dark);
+}
+
 /* Global Defaults for Forms [WIP] */
+
+        /* Divider */
+        .divider {
+            border-top: 3px solid var(--border-color);
+            height: 0px;
+        }
