@@ -14,6 +14,9 @@
     --accent-color: #28a745; /* Accent color */
     --accent-light: #7dc872; /* Lighter shade */
     --accent-dark: #218838; /* Darker shade */
+
+    /* Neutral Colors */
+    --neutral-color: #ffffff; /* Neutral color */
     
     /* Background Colors */
     --bg-color: #f8f9fa; /* Background color */
