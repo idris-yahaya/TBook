@@ -1,0 +1,115 @@
+/* ---------- Global CSS ---------- */
+
+/* Palette Properties  */
+:root {
+    /* Primary Color */
+    --primary-color: hsl(180, 98%, 31%);
+  
+    /* Secondary Color */
+    --secondary-color: #6c757d;
+    
+    /* Accent Color */
+    --accent-color: #28a745;
+  
+    /* Neutral Colors */
+    --white-color: #ffffff;
+    --black-color: #000000;
+    
+    /* Background Color */
+    --bg-color: #f8f9fa;
+    
+    /* Text Colors */
+    --text-color: #212529;
+  }
+  
+  /* Typography Properties  */
+  :root {
+    /* Fonts */
+    --heading-font: 'Roboto', sans-serif;
+    --subheading-font: 'Open Sans', sans-serif;
+    --body-font: 'Lato', sans-serif;
+  
+    /* Font Sizes */
+    --heading-size: 3.5rem;
+    --subheading-size: 2.5rem;
+    --body-size: 1.6rem;
+  
+    /* Font Weights */
+    --heading-weight: 700;
+    --subheading-weight: 600;
+    --body-weight: 400;
+  }
+  
+  /* Reset CSS */
+  * {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+  }
+  
+  /* Global Defaults for HTML and Body */
+  html {
+    font-family: var(--body-font);
+    font-size: 10px;
+  }
+  
+  body {
+    background: var(--white-color);
+    font-family: var(--body-font);
+    font-size: var(--body-size);
+    color: var(--text-color);
+    font-weight: var(--body-weight);
+  }
+  
+  /* Global Defaults for Headings */
+  h1 {
+    font-family: var(--heading-font);
+    font-size: var(--heading-size);
+    font-weight: var(--heading-weight);
+  }
+  
+  h2, h3, h4, h5, h6 {
+    font-family: var(--subheading-font);
+    font-size: var(--subheading-size);
+    font-weight: var(--subheading-weight);
+  }
+  
+  /* Global Defaults for Buttons */
+  input, button {
+    border: none;
+    background: none;
+    font: inherit;
+  }
+  
+  button { cursor: pointer; }
+  
+  /* Default Button */
+  .btn {
+    background: var(--background, var(--white-color));
+    color: var(--color, var(--primary-color));
+    font-weight: var(--subheading-weight);
+    width: max-content;
+    padding: 10px 25px;
+    border: 2px solid var(--border-color, var(--white-color));
+    border-radius: 6px;
+  }
+  
+  /* Primary Button */
+  .btn-primary:is(:hover, :focus) {
+    --background: transparent;
+    --color: var(--white-color);
+  }
+  
+  /* Global Miscellaneous Defaults */
+  li { list-style: none; }
+  
+  a { text-decoration: none; }
+  
+  a, ion-icon { display: block; }
+  
+  :focus-visible { outline-offset: 5px; }
+  
+  .divider {
+    border-top: 3px solid var(--secondary-color);
+    height: 0px;
+  }
