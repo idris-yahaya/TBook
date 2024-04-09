@@ -236,7 +236,7 @@ function displayAccount() {
             <nav class="navbar">
                 <ul class="navbar-list">
                     <li><a href="<?php echo BASE_URL ?>/webpages/case2/discover.php" class="navbar-link">Discover</a></li>
-                    <li><a href="#" class="navbar-link">Trips</a></li>
+                    <li><a href="<?php echo BASE_URL ?>/webpages/case4/itinerary.php" class="navbar-link">Trips</a></li>
                     <li><a href="<?php echo BASE_URL ?>/webpages/case3/insider.php" class="navbar-link">Insider</a></li>
                 </ul>
                 <div class="navbar-auth">

@@ -26,7 +26,11 @@
 </head>
 <body>
     <!-- Main Page Content -->
-    <main></main>
+    <main>
+        <div class="page-container">
+
+        </div>
+    </main>
 
     <!-- Page Specific JS and Include Links -->
     <script src=""></script>
