@@ -28,7 +28,7 @@ function displayAccount() {
     if ($is_logged_in) {
         echo "<a href='" . BASE_URL . "/webpages/case1/account.php' class='btn btn-primary navbar-btn'>Account</a>";
     } else {
-        echo "<a href='" . BASE_URL . "/webpages/case1/login.php' class='btn btn-primary navbar-btn'>Register Now</a>";
+        echo "<a href='" . BASE_URL . "/webpages/case1/login.php#register' class='btn btn-primary navbar-btn'>Register Now</a>";
     }
 }
 ?>

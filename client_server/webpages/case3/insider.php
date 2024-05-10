@@ -16,7 +16,7 @@
 	Date of Creation: 3/12/2024
 	Date of Last Modification: 3/16/2024
 	Version Number: 2
-	Use Case 3: Create Comparison Tracker
+	Use Case 3: Insider View Review
 -->
 
 <!DOCTYPE html>
@@ -31,235 +31,105 @@
     <!-- Page Specific CSS and Include Links -->
     <link rel="stylesheet" href="">
     <style>
-			.page-container {
-				background-color: #e8e8e8;
-				margin: 20px;
-			}
-			/* big grey box at the top */
-			.p1{
-				display: flex;
-				justify-content: space-between;
-				width: 95%;
-				font-size: 20px;
-				/* font-family: Trebuchet MS, sans-serif; */
-				background-color: #ccc;
-				border-radius: 30px;
-				margin: 20px;
-			}
-			/* smaller grey boxes in big grey box at top */
-			.p2{
-				flex: 1;
-				padding-top: 10pt;
-				padding-left: 20px;
-				padding-right: 20px;
-				/* font-family: Trebuchet MS, sans-serif; */
-				background-color: #e4e4e4;
-				border-radius: 30px;
-				margin: 20px;
-			}
-			/* formatting for scroll menu */
-			.p3{
-				background-color: #ccc;
-				border-radius: 30px;
-				margin: 20px;
-				padding: 10px;
-			}
-			/* scroll menu */
-			sp3 ul{
-				height: 390px;
-				width:95%;
-				font-size: 20px;
-				overflow: hidden;
-				overflow-y: scroll;
-			}
-			/* formatting for the drop down menus */
-			.chooseSort{
-				float: left;
-				padding-left: 20px;
-				/* font-family: Trebuchet MS, sans-serif; */
-			}
-			.noBulletPoints{
-				list-style-type: none;
-			}
-			.price{
-				float: right;
-			}
-			.comparisonOption{
-				padding: 20px;
-				margin: 20px;
-				/* font-family: Trebuchet MS, sans-serif; */
-				background-color: #e4e4e4;
-				border-radius: 30px;
-			}
-			/* shows cheaper price or better rating */
-			.better{
-				color: #33b864;
-			}
-			.worse{
-				color: #d30000;
-			}
-			.addToCart{
-				/* font-family: Trebuchet MS, sans-serif; */
-				text-align: center;
-			}
-			label{
-				/* font-family: Trebuchet MS, sans-serif; */
-			}
-			input{
-				/* font-family: Trebuchet MS, sans-serif; */
-			}
-		</style>
+        .noBulletPoints{
+            list-style-type: none;
+        }
+        .page-container{
+            /* background-color: #e8e8e8; */
+            padding: 20px;
+            font-family: Trebuchet MS, sans-serif;
+        }
+        .page-container p, .page-container select{
+            font-size: 20px;
+            font-family: Trebuchet MS, sans-serif;
+        }
+        .title{
+            font-size: 18px;
+        }
+        .custInfo{
+            font-size: 15px;
+        }
+        .personalReview{
+            padding: 20px;
+            margin: 20px;
+            font-family: Trebuchet MS, sans-serif;
+            background-color: #e4e4e4;
+            border-radius: 30px;
+        }
+        .reviewSection{
+            background-color: #ccc;
+            border-radius: 30px;
+            margin: 20px;
+            padding: 10px;
+        }
+        .center{
+            text-align: center;
+        }
+	</style>
 </head>
 <body>
     <!-- Main Page Content -->
     <main>
         <div class="page-container">
-            <!-- Customers actual itinerary -->
-            <h1>Your Itinerary</h1>
-            
-            <div class="p1">
-            
-            <div class="p2">
+            <h1>Customer Feedback</h1>
             <p>
-            Flight
-            <span class="price">$250</span><br/>
-            Delta<br/>
-            JFK<br/>
-            4 Star Rating<br/>
-            9/20/2024
-            </p>
-            </div>
-            
-            <div class="p2">
-            <p>
-            Hotel
-            <span class="price">$600</span><br/>
-            Hilton<br/>
-            Laurel, MD<br/>
-            3 Star Rating<br/>
-            9/21/2024 - 9/28/2024
-            </p>
-            </div>
-            
-            <div class="p2">
-            <p>
-            Car Rental
-            <span class="price">$100</span><br/>
-            2024 Lexus<br/>
-            Red<br/>
-            Sedan<br/>
-            </p>
-            </div>
-            
-            <div class="p2">
-            <p>
-            Activities
-            <span class="price">$200</span><br/>
-            Scuba Diving<br/>
-            Fine Dining<br/>
-            ATV
-            </p>
-            </div>
-            
-            </div>
-            
-            <br/>
-            
-            <!-- Sorting options -->
-            <h1>Compare the options</h1>
-            
-            <div class="chooseSort">
-            <p>
-            <label for="option">Choose an option:</label>
-                <select name="option" id="option">
-                    <option value="flight">Flight</option>
-                    <option value="Hotel">Hotel</option>
-                    <option value="carRental">Car Rental</option>
-                    <option value="activity">Activity</option>
+            <label for="sortReview">Sort By:</label>
+                <select name="sortReview" id="option">
+                    <option value="ratingHigh">Star Rating (High to Low)</option>
+                    <option value="ratingLow">Star Rating (Low to High)</option>
+                    <option value="dateOld">Date (Oldest)</option>
+                    <option value="dateNew">Date (Newest)</option>
                 </select>
             </p>
+            
+            <div class="reviewSection">
+            <ul class="noBulletPoints">
+                <div class="personalReview">
+                <li>
+                    <span class="title">This trip was amazing!</span> <br>
+                    <div class="custInfo">
+                    Londa Howard <br>
+                    3/3/2022 <br>
+                    </div>
+                    Star Rating: 5 <br>
+                    We had so much fun! The weather was amazing, the activities were fun, and we made a lot of
+                    great memories together as a family. 10/10 experience would use TBook again. Very smooth 
+                    experience all around!
+                </li>
+                </div>
+                
+                <div class="personalReview">
+                <li>
+                    <span class="title">Terrible experience</span> <br>
+                    <div class="custInfo">
+                    Bruce Gooberton <br>
+                    10/28/2023 <br>
+                    </div>
+                    Star Rating: 1 <br>
+                    The plane crashed >:-(
+                </li>
+                </div>
+                
+                <div class="personalReview">
+                <li>
+                    <span class="title">MID MID MID</span> <br>
+                    <div class="custInfo">
+                    Alexa Shongbingson <br>
+                    7/9/2020 <br>
+                    </div>
+                    Star Rating: 3 <br>
+                    The activities were somewhat boring. My husband and I were expecting a great view with exceptional 
+                    service except we got a view of the building next door and I found food crumbs in my bed as soon
+                    as we checked in. Maybe we just got unlucky with our bookings though.
+                </li>
+                </div>
+            </ul>
             </div>
             
-            <div class="chooseSort">
+            <div class="center">
             <p>
-            <label for="sortBy">Sort by:</label>
-                <select name="sortBy" id="sortBy">
-                    <option value="priceLow">Price (Low to High)</option>
-                    <option value="priceHigh">Price (High to Low)</option>
-                    <option value="starRating">Star Rating</option>
-                </select>
-            </p>
-            </div>
-            <br/>
-            
-            <!-- scroll through options -->
-            <div class="p3">
-            <section class="sp3">
-                <ul class="noBulletPoints">
-                    
-                    <!-- each of these are just copied and pasted to show scroll function -->
-                    <li class="comparisonOption">
-                    Delta
-                    <span class="price"><span class="worse">$250</span></span><br/>
-                    Departure Date: 9/18/2024<br/>
-                    Arrival Date: 9/19/2024<br/>
-                    Star Rating: <span class="better">4.5</span><br/>
-                    <input type="submit" value="Pick this option instead"/>
-                    </li>	
-
-                    <li class="comparisonOption">
-                    Southwest
-                    <span class="price"><span class="better">$150</span></span><br/>
-                    Departure Date: 9/18/2024<br/>
-                    Arrival Date: 9/19/2024<br/>
-                    Star Rating: <span class="worse">2.5</span><br/>
-                    <input type="submit" value="Pick this option instead"/>
-                    </li>	
-                    
-                    <li class="comparisonOption">
-                    Delta
-                    <span class="price"><span class="worse">$250</span></span><br/>
-                    Departure Date: 9/18/2024<br/>
-                    Arrival Date: 9/19/2024<br/>
-                    Star Rating: <span class="better">4.5</span><br/>
-                    <input type="submit" value="Pick this option instead"/>
-                    </li>	
-
-                    <li class="comparisonOption">
-                    Southwest
-                    <span class="price"><span class="better">$150</span></span><br/>
-                    Departure Date: 9/18/2024<br/>
-                    Arrival Date: 9/19/2024<br/>
-                    Star Rating: <span class="worse">2.5</span><br/>
-                    <input type="submit" value="Pick this option instead"/>
-                    </li>	
-                    
-                    <li class="comparisonOption">
-                    Delta
-                    <span class="price"><span class="worse">$250</span></span><br/>
-                    Departure Date: 9/18/2024<br/>
-                    Arrival Date: 9/19/2024<br/>
-                    Star Rating: <span class="better">4.5</span><br/>
-                    <input type="submit" value="Pick this option instead"/>
-                    </li>	
-
-                    <li class="comparisonOption">
-                    Southwest
-                    <span class="price"><span class="better">$150</span></span><br/>
-                    Departure Date: 9/18/2024<br/>
-                    Arrival Date: 9/19/2024<br/>
-                    Star Rating: <span class="worse">2.5</span><br/>
-                    <input type="submit" value="Pick this option instead"/>
-                    </li>					
-                        
-                </ul>
-            </section>
-            </div>
-            
-            <div class="addToCart">
-            <p>
-            <!-- should link to billing -->
-            Click <a href="../case4/itinerary.php">here</a> to add your current itinerary to your cart.
+            <!-- should link to write own review -->
+            Click <a href="writeReview.php">here</a> to tell us about your personal experience.
             </p>
             </div>
         </div>

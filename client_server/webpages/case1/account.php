@@ -33,18 +33,18 @@
     <!--Document style CSS applies background image and border for the text.-->
 	<style>
 		.page-container {
-			background-image: url("../../resources/images/blue.jpg");
+			background-image: url("https://images.unsplash.com/photo-1531436040007-7216019112d7?q=80&w=1287&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
 			min-height: 100vh;
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-attachment: fixed;
 		}
 
 		.form-container {
-			text-align: left;
+			text-align: center;
 			width: 500px;
 			margin: 1em auto;
-			padding-top: 50px; 
-			padding-bottom: 50px;
-			padding-left: 60px; 
-			padding-right: 60px;
+			padding: 50px;
 			border: 5px black double;
 		}
 	</style>
@@ -54,40 +54,8 @@
     <main>
 		<div class="page-container">
 			<div class="form-container">
-				<h2>Welcome to T-Book</h2><br/>
-				<form name="accountCreation" action="case2.html" method="POST">
-				
-				<!--Introduction paragraph and password restrictions.-->
-				<p>Please create an account by filling in the fields below. When creating a password, please use at least 8 characters, a letter, a number, and a special character.</p><br/><br/>
-
-				<!--Input text for first name-->
-				<p>Enter first name: </p>
-				<input type="text" name="fName"/><br/><br/>
-
-				<!--Input text for last name-->
-				<p>Enter last name: </p>
-				<input type="text" name="lName"/><br/><br/>
-
-				<!--Input text for username-->
-				<p>Enter last name: </p>
-				<input type="text" name="username"/><br/><br/>
-
-				<!--Input text for email. Ensure @ and . included with pattern matching.-->
-				<p>Enter your email: </p>
-				<input type="text" name="email"/><br/><br/>
-
-
-				<!--Input unseen password. Ensure at least 8 characters, one letter, one number, and one special character.-->
-				<p>Enter your password: </p>
-				<input type="text" name="password"/><br/><br/>
-
-				<!--Enter user account information will point to case2 for D4.-->
-				<a href = "../case2/discover.php">Enter</a>
-
-				<!--This will be used when the php file is created. 
-					<input type="submit" value="Submit"/>-->
-
-				</form>
+				<h2>Welcome to Your Account!</h2><br>
+				<a class="confirm" href="../case5/billing.php">Continue to Payment!</a>
 			</div>
 		</div>
     </main>

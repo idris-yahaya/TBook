@@ -54,11 +54,20 @@
         }
 
         /*style used to group all the elements under each heading 2*/
-        .boxGroup{
+        .boxGroup1{
             display: flex;
             justify-content: left;
             position: relative;
             left: 5%;
+        }
+
+        /*style used to group all the elements under each heading 2*/
+        .boxGroup2{
+            display: flex;
+            justify-content: left;
+            position: relative;
+            left: 5%;
+            top: 25px;
         }
 
         span{
@@ -66,9 +75,9 @@
         }
 
         /*style used for each accommodation/activities' information*/
-        .box{
-            width: 250px;
-            height: 120px;
+        .box, .box2, .box3,.box4{
+            width: 400px;
+            height: 250px;
             border: 1px solid #013229;
             border-radius: 10px;
             position:relative;
@@ -78,236 +87,217 @@
             color: #013229;
             background-color: #fffeeb;
             margin-right: 20px;
-        }
-        
-        /*style used for each accommodation/activities' information*/
-        .box2{
-            width: 250px;
-            height: 120px;
-            border: 1px solid #013229;
-            border-radius: 10px;
-            position:relative;
-            padding-top: 10pt;
-            padding-left: 5pt;
-            text-align: left;
-            color: #013229;
-            background-color: #fffeeb;
-            margin-right: 20px;
-        }
-        
-        /*style used for each accommodation/activities' information*/
-        .box3{
-            width: 250px;
-            height: 120px;
-            border: 1px solid #013229;
-            border-radius: 10px;
-            position:relative;
-            padding-top: 10pt;
-            padding-left: 5pt;
-            text-align: left;
-            color: #013229;
-            background-color: #fffeeb;
-            margin-right: 20px;
-        }
-        
-        /*style used for each accommodation/activities' information*/
-        .box4{
-            width: 250px;
-            height: 120px;
-            border: 1px solid #013229;
-            border-radius: 10px;
-            position:relative;
-            padding-top: 10pt;
-            padding-left: 5pt;
-            text-align: left;
-            color: #013229;
-            background-color: #fffeeb; 
         }
 
-        /*used to position the arrows on the page*/
-        .arrow{
-            width: 50px;
-            height: 50px;
+        /*style used for the filter information*/
+        .filterResults{
+            display: flex;
+            justify-content: right;
             position: relative;
-            left: 105%;
-            bottom: 60%;
-        }
-
-        /*style for description under accommodation / activity */
-        .smallText{
-            font-size: 8pt;
-        }
-
-        /*style used to highlight the option to compare options
-        .compare{
-            font-size: 10pt;
-            text-decoration: underline;
-        }
-
-        /*used to position images for accommodation / activities within box element*/
-        .image{
-            float:right;
-            width: auto;
-            height: 70px;
-            position: relative; 
-            bottom: 30px;
-            right: 15px;
-        }
-
-        /*style for container used to group the Car Rental information*/
-        .container{
-            width: 1075px;
-            height: 215px;
-            border: 1px solid #013229;
+            right: 5px;
+            bottom: 555px;
+            border:#013229;
             border-radius: 10px;
-            position:relative;
-            padding-top: 10pt;
-            padding-left: 5pt;
-            text-align: left;
-            color: #013229;
-            background-color: #fffeeb;
-            margin-left: 60px;
+            border-width: 2px;
         }
+        
+        /* a slideshow container for the images */
+        .slideshow-container {
+            position: relative;
+            max-width: 100%;
+            margin: auto;
+            bottom: 115px;
+        }
+
+        /* style used to display contents */
+        .slides {
+            display:contents;
+        } 
+
+        /* style used for images in package */
+        .slides img {
+            float: right;
+            width: 105px;
+            height: 70px;
+        }
+
+        /* style used for buttons */
+        .button {
+        background-color: #f2f1dc;
+        color: white;
+        padding: 10px 32px;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        border-radius: 10px;
+        }
+
+        .button:hover {
+        background-color: #fffeeb;
+        }
+
+        /* style used for spacing buttons on page */
+        .bts {
+            margin-left: 70px;
+        }
+
+        /* style used for spacing buttons on page */
+        .bt2 {
+            margin-top: 20px;
+        }
+
     </style>
 </head>
 <body>
     <!-- Main Page Content -->
     <main>
         <div class="page-container">
-            <h1 class = "subTitle">Where To Next?</h1>
-            <p class = "subHeading">Let us help you plan your next adventure! We'll guide you in discovering and booking your ideal accommodation.</p><br>
+        <form action="index.html">
+    <h1 class = "subTitle">Where To Next?</h1>
+    <p class = "subHeading">Let us help you plan your next adventure! We'll guide you in discovering and booking your ideal accommodation.</p><br>
 
-            <h2 class = "rowTitle">Discover Accommodations</h2>
-            <!--boxGroup is used to group all the elements in the section together-->
-            <div class = "boxGroup">
-                <!--box, box2, box3, box4 is used to group each accommodation/activities' information-->
-                <div class = "box">
-                    <p>
-                        <span style = "font-size: 13pt">Holiday Inn</span>
-                        <span class = "smallText">9.6/10 (624 reviews)</span>
-                        <br>
-                        <br>
-                        <span style = "font-size: 10pt">$850</span>
-                        <span class = "smallText">per night</span><br>
-                        <span class ="compare"><a href = "../case3/insider.php">Compare</a></span>
-                        <img class = "image" src ="../../resources/images/../../resources/images/hotel.jpg" alt="Hotel Preview"/>
-                    </p>
+    <h2 class = "rowTitle">Package Deals</h2>
+    <!--boxGroup1 is used to group all the elements in the section together-->
+    <div class = "boxGroup1">
+        <!--box, box2, box3, box4 is used to group each accommodation/activities' information-->
+        <div class = "box">
+            <p> <h3><a href = "https://swe.umbc.edu/~rsit1/is448/TBook/client_server/webpages/case4/itinerary.php">Package #1</a></h3>
+                <span style = "font-size: 10pt">9/10 (624 reviews) <br> $850 per night</span>
+                <br> <br>
+                <span style = "font-size: 12pt">Accomodation: <br> Holiday Inn</span>
+                <br>
+                <br>
+                <span style = "font-size: 12pt">Activity: <br> Zoo</span>
+                <br>
+                <br>
+                    <div class="slideshow-container">
+                        <div class="slides">
+                        <img src ="../../resources/images/../../resources/images/hotel.jpg" alt="Hotel Preview" />
+                        <img src ="../../resources/images/activity2.jpg" alt="Scuba Diving" />
+                        </div>
+                    </div>
+                <br>
+                <input type="checkbox" id="box_1" name="box_1" value="Select">
+                <label for="box_1"> Select Package #1</label><br>
+              </p>
+          </div>
+
+        <div class = "box2">
+            <p> <h3><a href = "https://swe.umbc.edu/~rsit1/is448/TBook/client_server/webpages/case4/itinerary.php">Package #2</a></h3>
+                <span style = "font-size: 10pt">8/10 (540 reviews) <br> $1000 per night</span>
+                <br> <br>
+                <span style = "font-size: 12pt">Accomodation: <br> Hilton</span>
+                <br>
+                <br>
+                <span style = "font-size: 12pt">Activity: <br> Aquarium</span>
+                <br>
+                <br>
+                <div class="slideshow-container">
+                    <div class="slides">
+                      <img src ="../../resources/images/../../resources/images/hotel.jpg" alt="Hotel Preview" />
+                      <img src ="../../resources/images/activity1.jpg" alt="Aquarium" />
+                    </div>
                 </div>
-
-                <div class = "box2">
-                    <p>
-                        <span style = "font-size: 13pt">Hilton</span>
-                        <span class = "smallText">9.6/10 (624 reviews)</span>
-                        <br>
-                        <br>
-                        <span style = "font-size: 10pt">$850</span>
-                        <span class = "smallText">per night</span><br>
-                        <span class ="compare"><a href = "../case3/insider.php">Compare</a></span>
-                        <img class = "image" src ="../../resources/images/hotel.jpg" alt="Hotel Preview" />
-                    </p>
-                </div>
-
-                <div class = "box3"> 
-                    <p>
-                        <span style = "font-size: 13pt">Hampton Inn</span>
-                        <span class = "smallText">9.6/10 (624 reviews)</span>
-                        <br>
-                        <br>
-                        <span style = "font-size: 10pt">$850</span>
-                        <span class = "smallText">per night</span><br>
-                        <span class ="compare"><a href = "../case3/insider.php">Compare</a></span>
-                        <img class = "image" src ="../../resources/images/hotel.jpg" alt="Hotel Preview" />
-                    </p>
-                </div>
-
-                <div class = "box4">
-                    <p>
-                        <span style = "font-size: 13pt">Four Seasons</span>
-                        <span class = "smallText">9.6/10 (624 reviews)</span>
-                        <br>
-                        <br>
-                        <span style = "font-size: 10pt">$850</span>
-                        <span class = "smallText">per night</span><br>
-                        <span class ="compare"><a href = "../case3/insider.php">Compare</a></span>
-                        <img class = "image" src ="../../resources/images/hotel.jpg" alt="Hotel Preview" />
-                    </p>
-                    <img class = "arrow" src ="../../resources/images/arrow.png" alt="Arrow" />
-                </div>
-
-            </div>
-            <h2 class = "rowTitle">Recreational Activities</h2>
-            <!--boxGroup is used to group all the elements in the section together-->
-            <div class = "boxGroup">
-                <!--box, box2, box3, box4 is used to group each accommodation's information-->
-                <div class = "box">
-                    <p>
-                        <span style = "font-size: 13pt">Scuba Diving</span>
-                        <span class = "smallText">9.6/10 (624 reviews)</span>
-                        <br>
-                        <br>
-                        <span style = "font-size: 10pt">$150</span>
-                        <span class = "smallText">per adult</span><br>
-                        <span class ="compare"><a href = "../case3/insider.php">Compare</a></span>
-                        <img class = "image" src ="../../resources/images/activity1.jpg" alt="Scuba Diving" />
-                    </p>
-                </div>
-
-                <div class = "box2">
-                    <p>
-                        <span style = "font-size: 13pt">Aquarium</span>
-                        <span class = "smallText">9.6/10 (624 reviews)</span>
-                        <br>
-                        <br>
-                        <span style = "font-size: 10pt">$150</span>
-                        <span class = "smallText">per adult</span><br>
-                        <span class ="compare"><a href = "../case3/insider.php">Compare</a></span>
-                        <img class = "image" src ="../../resources/images/activity1.jpg" alt="Aquarium" />
-                    </p>
-                </div>
-
-                <div class = "box3">
-                    <p>
-                        <span style = "font-size: 13pt">Zoo</span>
-                        <span class = "smallText">9.6/10 (624 reviews)</span>
-                        <br>
-                        <br>
-                        <span style = "font-size: 10pt">$50</span>
-                        <span class = "smallText">per adult</span><br>
-                        <span class ="compare"><a href = "../case3/insider.php">Compare</a></span>
-                        <img class = "image" src ="../../resources/images/activity2.jpg" alt="Zoo" />
-                    </p>
-                </div>
-
-                <div class = "box4">
-                    <p>
-                        <span style = "font-size: 13pt">Garden</span>
-                        <span class = "smallText">9.6/10 (624 reviews)</span>
-                        <br>
-                        <br>
-                        <span style = "font-size: 10pt">$30</span>
-                        <span class = "smallText">per adult</span><br>
-                        <span class ="compare"><a href = "../case3/insider.php">Compare</a></span>
-                        <img class = "image" src ="../../resources/images/activity2.jpg" alt="Garden" />
-                    </p>
-                    <img class = "arrow" src ="../../resources/images/arrow.png" alt="Arrow" />
-                </div>
-            </div>
-
-            <h2 class = "rowTitle">Car Rental</h2>
-            <!--container is used to group the Car Rental information-->
-            <div class = "container">
-                <form name="carRental" action="index.html" method="POST">
-                <p>
-                    Pick Up Location: <input type="text" name="pickUpLocation"/> <br /><br />
-                    Pick Up Date: <input type="text" name="pickUpDate"/> <br /><br />
-                    Drop Off Date: <input type="text" name="dropOffDate"/> <br /><br />
-                    Numbers of Passenger (optional): <input type="text" name="numOfPass"/> </p><br /><br />
-                    
-                    <input type="submit" value="Search"/>
-                    </form>
-                
-            </div>
+            <br>
+            <input type="checkbox" id="box_2" name="box_2" value="Select">
+            <label for="box_2"> Select Package #2</label><br>
+            </p>
         </div>
+    </div>
+    <!--boxGroup2 is used to group all the elements in the section together-->
+    <div class = "boxGroup2">
+        <div class = "box3"> 
+            <p> <h3><a href = "https://swe.umbc.edu/~rsit1/is448/TBook/client_server/webpages/case4/itinerary.php">Package #3</a></h3>
+                <span style = "font-size: 10pt"> 7/10 (924 reviews) <br> $650 per night</span>
+                <br> <br>
+                <span style = "font-size: 12pt">Accomodation: <br> Hampton Inn</span>
+                <br>
+                <br>
+                <span style = "font-size: 12pt">Activity: <br> Garden</span>
+                <br>
+                <br>
+                <div class="slideshow-container">
+                    <div class="slides">
+                      <img src ="../../resources/images/../../resources/images/hotel.jpg" alt="Hotel Preview" />
+                      <img src ="../../resources/images/activity2.jpg" alt="Garden" />
+                    </div>
+                </div>
+            <br>
+            <input type="checkbox" id="box_3" name="box_3" value="Select">
+            <label for="box_3"> Select Package #3</label><br>
+            </p>
+        </div>
+
+        <div class = "box4">
+            <p> <h3><a href = "https://swe.umbc.edu/~rsit1/is448/TBook/client_server/webpages/case4/itinerary.php">Package #4</a></h3>
+                <span style = "font-size: 10pt">9/10 (429 reviews) <br> $1500 per night</span>
+                <br> <br>
+                <span style = "font-size: 12pt">Accomodation: <br> Four Seasons</span>
+                <br>
+                <br>
+                <span style = "font-size: 12pt">Activity: <br> Scuba Diving</span>
+                <br>
+                <br>
+                <div class="slideshow-container">
+                    <div class="slides">
+                        <img src ="../../resources/images/../../resources/images/hotel.jpg" alt="Hotel Preview" />
+                        <img src ="../../resources/images/activity1.jpg" alt="Scuba Diving" />
+                    </div>
+                </div>
+            <br>
+            <input type="checkbox" id="box_4" name="box_4" value="Select">
+            <label for="box_4"> Select Package #4</label><br>
+            </p>
+        </div>
+    </div>
+    <br>
+    <div class = "button bts bt2">
+        <input type = "submit" value = "submit selection" />
+    </div>
+    <div class = "button bt2">
+        <input type = "reset" value = "reset selection" />
+    </div>
+</form>
+    <div class = "filterResults">
+        <h2>Filter</h2>
+        <form>
+            <br>
+            <br>
+            <label for="priceRange">Price Range:</label>
+            <input type="range" id="priceRange" name="priceRange" min="0" max="10000" step="10" oninput="updatePrice()">
+            <div id="priceIndicator"></div>            
+                <script>
+                    function updatePrice() {
+                        // Get the value of the range input
+                        var price = document.getElementById("priceRange").value;
+                
+                        // Update the price indicator element with the current price
+                        document.getElementById("priceIndicator").innerText = "Price: $" + price;
+                    }
+                </script>
+            <br>
+            <label>Star Rating:</label><br>
+            <input type="checkbox" id="star1" name="starRating" value="1">
+            <label for="star1">1 Star</label><br>
+          
+            <input type="checkbox" id="star2" name="starRating" value="2">
+            <label for="star2">2 Stars</label><br>
+          
+            <input type="checkbox" id="star3" name="starRating" value="3">
+            <label for="star3">3 Stars</label><br>
+          
+            <input type="checkbox" id="star4" name="starRating" value="4">
+            <label for="star4">4 Stars</label><br>
+          
+            <input type="checkbox" id="star5" name="starRating" value="5">
+            <label for="star5">5 Stars</label><br>
+            <br>
+            <div class = button>
+                <input type="submit" value="Apply Filters">
+            </div>
+        </form>
+    </div>
     </main>
 
     <!-- Page Specific JS and Include Links -->

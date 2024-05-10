@@ -148,7 +148,7 @@
             margin-top: 10px;
         }
 
-        /* Panel Section for Address, Payment, Discount, Checkout */
+        /* Panel Section for Address, Payment, Checkout */
         .right-panel-section {
             /* border: 1px solid black; */
             margin-bottom: 10px;
@@ -159,7 +159,7 @@
             align-self: center;
         }
 
-        /* Styling for headings within address, payment, and discount sections */
+        /* Styling for headings within address, and payment sections */
         .order-details {
             display: flex;
             flex-direction: column;
@@ -176,27 +176,13 @@
             padding: 10px 0px;
         }
 
-        .address-detail h3, .payment-detail h3, .discount-detail h3 {
+        .address-detail h3, .payment-detail h3 {
             margin-bottom: 5px;
         }
 
-        .address-detail p, .payment-detail p, .discount-detail p {
+        .address-detail p, .payment-detail p {
             margin: 0;
             font-size: 14px;
-        }
-
-        /* Discount Section Container */
-        .discount-section {
-            /* border: 1px solid black; */
-            display: flex;
-            align-items: baseline;
-            justify-content: space-between;
-            margin-bottom: 10px;
-            padding: 10px 0px;
-        }
-
-        .discount-detail p {
-            margin-bottom: 10px;
         }
 
         /* Billing Section Container */
@@ -300,19 +286,6 @@
                         <div class="item-cost">$10.00</div>
                         <div class="item-delete">&#9447;</div>
                     </div>
-                    
-                    <div class="cart-item">
-                        <div class="item-image">
-                            <img src="../../resources/images/istockphoto-1409329028-612x612.jpg" alt="">
-                        </div>
-                        <div class="item-details">
-                            <h3>Item Title</h3>
-                            <p>Item Details</p>
-                            <p>Quantity: #</p>
-                        </div>
-                        <div class="item-cost">$10.00</div>
-                        <div class="item-delete">&#9447;</div>
-                    </div>
 
                     <div class="cart-item">
                         <div class="item-image">
@@ -382,22 +355,6 @@
                             <div class="payment-edit"><p><a href="">Edit</a></p></div>
                         </div>
 
-                        <!-- Discount Section -->
-                        <div class="discount-section">
-                            <div class="discount-detail">
-                                <h3>Do you have any discount code?</h3>
-                                <p>Only one discount code per order can be applied.</p>
-
-                                <!-- Billing PHP form to Process Discount Code -->
-                                <form action="billing.php" method="post">
-                                    <div class="form-container">
-                                        <input type="text" name="discount_code" placeholder="Your discount code here">
-                                        <input type="submit" name="Apply" value="Apply">
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-
                         <!-- Section Divider -->
                         <div class="divider-section"><hr class="divider"></div>
 
@@ -412,11 +369,6 @@
                             <div class="total-section">
                                 <div class="total-item"><p>Shipping Costs</p></div>
                                 <div class="total-item"><p>Free!</p></div>
-                            </div>
-
-                            <div class="total-section">
-                                <div class="total-item"><p>Discount</p></div>
-                                <div class="total-item"><p>-</p></div>
                             </div>
 
                             <div class="total-section">

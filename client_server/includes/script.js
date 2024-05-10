@@ -28,9 +28,11 @@ for (var i = 0; i < links.length; i++) {
 }
 
 // Add 'current-page' Indicator to the Active Header Nav Link
+var currentUrl = new URL(window.location.href).href.split('#')[0];
 for (var i = 0; i < links.length; i++) {
-    if (links[i].href === window.location.href) {
+    var linkUrl = new URL(links[i].href).href.split('#')[0];
+    if (currentUrl === linkUrl) {
         links[i].classList.add('current-page');
-        // Stop loop once the current page link is found
+        break;
     }
 }

@@ -137,7 +137,7 @@
       .featured {
         margin-top: -138px;
         min-height: 1px;
-        /* background-color: aqua; */
+        background-color: black;
       }
 
       /* Responsiveness for Smaller Screen Sizes */
