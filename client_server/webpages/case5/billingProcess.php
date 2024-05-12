@@ -25,6 +25,7 @@ $customerId = '';
 $queryCustomerId = "SELECT cust_id FROM customers WHERE cust_email = '$userEmail'";
 $resultCustomerId = mysqli_query($mysql_db, $queryCustomerId);
 
+// Retrieval of Purchased Packages
 if ($resultCustomerId && mysqli_num_rows($resultCustomerId) > 0) {
     $row = mysqli_fetch_assoc($resultCustomerId);
     $customerId = $row['cust_id'];
@@ -51,7 +52,6 @@ if ($resultCustomerId && mysqli_num_rows($resultCustomerId) > 0) {
     }
 }
 
-
 // Handle Form Submissions
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Retrieve and Sanitize Input Data (Prevent HTML & SQL Injections)
@@ -59,14 +59,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $cardNumber = isset($_POST["cardNumber"]) ? mysqli_real_escape_string($mysql_db, $_POST['cardNumber']) : '';
     $expiry = isset($_POST["expiry"]) ? mysqli_real_escape_string($mysql_db, $_POST['expiry']) : '';
     $cvv = isset($_POST["cvv"]) ? mysqli_real_escape_string($mysql_db, $_POST['cvv']) : '';
+    $cardType = isset($_POST["cardType"]) ? mysqli_real_escape_string($mysql_db, $_POST['cardType']) : '';
     $street = isset($_POST["street"]) ? mysqli_real_escape_string($mysql_db, $_POST['street']) : '';
     $city = isset($_POST["city"]) ? mysqli_real_escape_string($mysql_db, $_POST['city']) : '';
     $state = isset($_POST["state"]) ? mysqli_real_escape_string($mysql_db, $_POST['state']) : '';
     $zip = isset($_POST["zip"]) ? mysqli_real_escape_string($mysql_db, $_POST['zip']) : '';
 
     // Insert data into billing table
-    $query = "INSERT INTO billing (Cust_ID, Cust_First_Name, Card_Number, Exp_Date, CVV, Street, City, State, Zip) 
-              VALUES ('$customerId', '$cardHolder', '$cardNumber', '$expiry', '$cvv', '$street', '$city', '$state', '$zip')";
+    $query = "INSERT INTO billing (Cust_ID, Cust_First_Name, Card_Number, Card_Type, Exp_Date, CVV, Street, City, State, Zip) 
+              VALUES ('$customerId', '$cardHolder', '$cardNumber', '$cardType', '$expiry', '$cvv', '$street', '$city', '$state', '$zip')";
     $result = mysqli_query($mysql_db, $query);
 
     // Data Insertion Error
@@ -84,10 +85,10 @@ mysqli_close($mysql_db);
 
 <!--
     Author: Idris Yahaya
-    Date of Creation: 3/10/3024
+    Date of Creation: 4/10/3024
     Date of Last Modification: 5/14/2024
     Version Number: 5.6
-    Use Case 5: Create Billing Options
+    Use Case 5: Process Billing Options
 -->
 
 <!DOCTYPE html>
@@ -158,7 +159,7 @@ mysqli_close($mysql_db);
                         </p>
                     </div>
 
-                    <!-- Display purchased packages -->
+                    <!-- Display Purchased Packages -->
                     <div class="purchased">
                         <h3>Purchased Packages:</h3>
                         <?php if (!empty($purchasedPackages)): ?>

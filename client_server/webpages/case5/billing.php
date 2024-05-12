@@ -5,10 +5,10 @@
     } 
 
     // Check if user is logged in, otherwise redirect to login page
-    if (!isset($_SESSION['user_id'])) {
-        header("Location: ../case1/login.php");
-        exit;
-    } 
+    // if (!isset($_SESSION['user_id'])) {
+    //     header("Location: ../case1/login.php");
+    //     exit;
+    // } 
 ?>
 
 <!--
@@ -31,6 +31,7 @@
     <!-- Page Specific CSS and Include Links -->
     <link rel="stylesheet" href="billingStyles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <style></style>
 </head>
 <body>
@@ -44,7 +45,7 @@
                 <form id="paymentForm" class="form" action="billingProcess.php" method="POST">
                     <!-- Card Holder Section -->
                     <div class="input-group card-holder">
-                        <div class="section-title">Card Holder</div>
+                        <div class="section-title ch-title" id="ch-title">Card Holder</div>
                         <div class="form-control">
                             <input type="text" id="cardHolder" name="cardHolder" placeholder="Enter card holder's name">
                             <i class="fas fa-check-circle"></i>
@@ -55,7 +56,7 @@
                     
                     <!-- Card Details Section -->
                     <div class="input-group card-details">
-                        <div class="section-title">Card Details</div>
+                        <div class="section-title" id="cd-title">Card Details</div>
                         <div class="form-control">
                             <input type="text" id="cardNumber" name="cardNumber" placeholder="Card Number">
                             <i class="fas fa-check-circle"></i>
@@ -69,6 +70,9 @@
                             <div class="form-control">
                                 <input type="text" id="cvv" name="cvv" placeholder="CVV">
                             </div>
+                            <div class="form-control">
+                                <input type="text" id="cardType" name="cardType" placeholder="Type" readonly>
+                            </div>
                         </div>
                         
                         <small class="error-message">Please enter valid card details</small>
@@ -76,7 +80,7 @@
                     
                     <!-- Billing Address Section -->
                     <div class="input-group billing-address">
-                        <div class="section-title">Billing Address</div>
+                        <div class="section-title" id="ba-title">Billing Address</div>
                         <div class="form-control">
                             <input type="text" id="street" name="street" placeholder="Street">
                             <i class="fas fa-check-circle"></i>

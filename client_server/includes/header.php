@@ -5,8 +5,8 @@ if (!isset($_SESSION)) {
 } 
 
 // Absolute Website URL (Swap Local-V1 vs Local-V2 GL Server)
-define('BASE_URL', 'http://localhost:3000/Tbook/client_server');
-// define('BASE_URL', 'http://localhost:3000/Users/Idris/Desktop/CompSci/Tbook-workspace/TBook/client_server'); 
+// define('BASE_URL', 'http://localhost:3000/Tbook/client_server');
+define('BASE_URL', 'http://localhost:3000/Users/Idris/Desktop/CompSci/General/Projects/Tbook-workspace/TBook/client_server'); 
 // define('BASE_URL', 'https://swe.umbc.edu/~dp08859/TBook/client_server');
 
 // Determine Whether User is Logged in
